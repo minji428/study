@@ -116,39 +116,63 @@ request.setCharacterEncoding("UTF-8");
 </head>
 <body>
 <table>
-    <div class="slideshow-container">
-
-      <!-- Full-width images with number and caption text -->
-      <div class="mySlides fade">
-        <div class="numbertext">1 / 6</div>
-        <img src="img/1.jpg" width="50" height="3">
-        <div class="text">ACNE STUDIO</div>
-      </div>
-
-      <div class="mySlides fade">
-        <div class="numbertext">2 / 6</div>
-        <img src="img/2.jpg" width="50" height="3">
-        <div class="text">ACNE STUDIO</div>
-      </div>
-
-      <div class="mySlides fade">
-        <div class="numbertext">3 / 6</div>
-        <img src="img/3.jpg" width="50" height="10">
-        <div class="text">ACNE STUDIO</div>
-      </div>
-      <!-- Next and previous buttons -->
-      <a class="prev" onclick="moveSlides(-1)">&#10094;</a>
-      <a class="next" onclick="moveSlides(1)">&#10095;</a>
-    </div>
-    <br/>
-
-    <!-- The dots/circles -->
-    <div style="text-align:center">
-      <span class="dot" onclick="currentSlide(0)"></span>
-      <span class="dot" onclick="currentSlide(1)"></span>
-      <span class="dot" onclick="currentSlide(2)"></span>
-    </div>
-
+	<tr >
+		<td>
+	    <div class="slideshow-container">
+	
+	      <!-- Full-width images with number and caption text -->
+	      <div class="mySlides fade">
+	        <div class="numbertext">1 / 6</div>
+	        <img src="img/1.jpg" width="50" height="3">
+	        <div class="text">ACNE STUDIO</div>
+	      </div>
+	
+	      <div class="mySlides fade">
+	        <div class="numbertext">2 / 6</div>
+	        <img src="img/2.jpg" width="50" height="3">
+	        <div class="text">ACNE STUDIO</div>
+	      </div>
+	
+	      <div class="mySlides fade">
+	        <div class="numbertext">3 / 6</div>
+	        <img src="img/3.jpg" width="50" height="10">
+	        <div class="text">ACNE STUDIO</div>
+	      </div>
+	      <!-- Next and previous buttons -->
+	      <a class="prev" onclick="moveSlides(-1)">&#10094;</a>
+	      <a class="next" onclick="moveSlides(1)">&#10095;</a>
+	    </div>
+	    <br/>
+	
+	    <!-- The dots/circles -->
+	    <div style="text-align:center">
+	      <span class="dot" onclick="currentSlide(0)"></span>
+	      <span class="dot" onclick="currentSlide(1)"></span>
+	      <span class="dot" onclick="currentSlide(2)"></span>
+	    </div>
+		</td>
+		<td weight="100">
+		</td>
+		<td>
+			<div class="container">
+			    <div class="col-lg-4"></div>
+			    <div class="col-lg-4">
+			        <div class="jumbotron" style="padding-top : 20px;">
+			        <form method="post" action="loginAction.jsp">
+			            <div class="form-group">
+			                <input type="text" class="form-control" placeholder="아이디" name="userID" maxlength="20">
+			            </div>
+			                <div class="form-group">
+			                <input type="password" class="form-control" placeholder="비밀번호" name="userPasssword" maxlength="20">
+			            </div>
+			            <input type="submit" class="btn btn-primary form-control" value="로그인">
+			        </form>
+			    </div>
+			    <div class="col-lg-4"></div>
+			</div>
+		</td>
+			
+	</tr>
 
 <script>
 
@@ -207,97 +231,3 @@ dots[n].className += " active";
 
 
 </table>
-
-
-
-
-<%-- 
-<img src="img/m1.jpg" id=mainImage alt="slide"/>
-
-<script>
-	var myImage = document.getElementById("mainImage");
-	var imageArray = [ "img/m1.jpg",
-			"img/m2.jpg", "img/m3.jpg" ];
-	var imageIndex = 0;
-
-	function changeImage() {
-		myImage.setAttribute("src", imageArray[imageIndex]);
-		imageIndex++;
-		if (imageIndex >= imageArray.length) {
-			imageIndex = 0;
-		}
-	}
-	setInterval(changeImage, 3000);
-</script>
-
-
-
---%>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<%--
-<%
-String id=(String)session.getAttribute("id");
-String managerId=(String)session.getAttribute("managerId");
-
-String name="";
-%>
-		<div align="right">
-			<font size="2">
-			<%
-			if(id==null && managerId==null){
-				%>
-			<a href = "00_main.jsp?center" style="text-decoration: none">회원가입</a>&nbsp;
-			<img alt="" src="img/top1.jpg"> &nbsp;
-			<a href = "00_main.jsp?center" style="text-decoration: none">로그인</a>&nbsp;
-				
-				<%
-			}else{
-				if(id!=null){
-					System.out.println("로그인 아이디 확인용 = " + name);
-					%>
-					<%=name %>님 &nbsp;  <img alt="" src="img/top1.jpg"> &nbsp;
-					<a href = "00_main.jsp?center=" style="text-decoration: none">주문확인</a>&nbsp;
-					<%
-				}else if(managerId!=null){
-					%>
-					<%=name %>님 &nbsp;  <img alt="" src="img/top1.jpg"> &nbsp;
-					<a href = "00_main.jsp?center=" style="text-decoration: none">상품수정</a>&nbsp;
-					<img alt="" src="img/top1.jpg"> &nbsp;
-					<a href = "00_main.jsp?center=" style="text-decoration: none">주문확인</a>&nbsp;
-					<%
-				}
-				%>
-					<img alt="" src="img/top1.jpg"> &nbsp;
-					<a href = "06_logout.jsp" style="text-decoration: none">로그아웃</a>&nbsp;
-				<%
-			}
-			%>
-					<img alt="" src="img/top1.jpg"> &nbsp;
-					<a href = "00_main.jsp?center=" style="text-decoration: none">고객센터</a>&nbsp;
-			</font>
-		</div>
---%>
-</body>
-</html>
