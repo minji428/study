@@ -16,14 +16,13 @@ request.setCharacterEncoding("UTF-8");
 
 /* Slideshow container */
 .slideshow-container {
-  max-width: 10000px;
-  max-height: 750px;
-  position: relative;
+  width: 800px;
+  height: 170px;
   margin: auto;
 }
 .slideshow-container .mySlides img {
-  width : 750px;
-  height: 100px;
+  width : 800px;
+  height: 200px;
 }
 
 /* Hide the images by default */
@@ -34,7 +33,7 @@ request.setCharacterEncoding("UTF-8");
 /* Next & previous buttons */
 .prev, .next {
   cursor: pointer;
-  position: absolute;
+  position: relative;
   top: 50%;
   width: auto;
   margin-top: -22px;
@@ -51,6 +50,8 @@ request.setCharacterEncoding("UTF-8");
 .next {
   right: 0;
   border-radius: 3px 0 0 3px;
+  position: relative;
+  margin-right:50px;
 }
 
 /* On hover, add a black background color with a little bit see-through */
@@ -88,6 +89,9 @@ request.setCharacterEncoding("UTF-8");
   border-radius: 50%;
   display: inline-block;
   transition: background-color 0.6s ease;
+  position:relative;
+  left:-150px;
+  top:0px
 }
 
 .active, .dot:hover {
@@ -100,6 +104,9 @@ request.setCharacterEncoding("UTF-8");
   -webkit-animation-duration: 1.5s;
   animation-name: fade;
   animation-duration: 1.5s;
+  position:relative;
+  left:-150px;
+  top:0px
 }
 
 @-webkit-keyframes fade {
@@ -115,32 +122,32 @@ request.setCharacterEncoding("UTF-8");
 <title>Insert title here</title>
 </head>
 <body>
-<table>
-	<tr >
-		<td>
+
 	    <div class="slideshow-container">
-	
 	      <!-- Full-width images with number and caption text -->
 	      <div class="mySlides fade">
-	        <div class="numbertext">1 / 6</div>
+	        <div class="numbertext">1 / 4</div>
 	        <img src="img/1.jpg" width="50" height="3">
-	        <div class="text">ACNE STUDIO</div>
+	        <div class="text">MY HEALTH PARTNER</div>
 	      </div>
 	
 	      <div class="mySlides fade">
-	        <div class="numbertext">2 / 6</div>
+	        <div class="numbertext">2 / 4</div>
 	        <img src="img/2.jpg" width="50" height="3">
-	        <div class="text">ACNE STUDIO</div>
+	        <div class="text">MY HEALTH PARTNER</div>
 	      </div>
 	
 	      <div class="mySlides fade">
-	        <div class="numbertext">3 / 6</div>
+	        <div class="numbertext">3 / 4</div>
 	        <img src="img/3.jpg" width="50" height="10">
-	        <div class="text">ACNE STUDIO</div>
+	        <div class="text">MY HEALTH PARTNER</div>
 	      </div>
-	      <!-- Next and previous buttons -->
-	      <a class="prev" onclick="moveSlides(-1)">&#10094;</a>
-	      <a class="next" onclick="moveSlides(1)">&#10095;</a>
+	      
+	      <div class="mySlides fade">
+	        <div class="numbertext">4 / 4</div>
+	        <img src="img/4.jpg" width="50" height="10">
+	        <div class="text">MY HEALTH PARTNER</div>
+	      </div>
 	    </div>
 	    <br/>
 	
@@ -149,11 +156,9 @@ request.setCharacterEncoding("UTF-8");
 	      <span class="dot" onclick="currentSlide(0)"></span>
 	      <span class="dot" onclick="currentSlide(1)"></span>
 	      <span class="dot" onclick="currentSlide(2)"></span>
+	      <span class="dot" onclick="currentSlide(3)"></span>
 	    </div>
-		</td>
-		<td weight="100">
-		</td>
-		<td>
+		
 			<div class="container">
 			    <div class="col-lg-4"></div>
 			    <div class="col-lg-4">
@@ -166,13 +171,12 @@ request.setCharacterEncoding("UTF-8");
 			                <input type="password" class="form-control" placeholder="비밀번호" name="userPasssword" maxlength="20">
 			            </div>
 			            <input type="submit" class="btn btn-primary form-control" value="로그인">
+			            <button onclick="location.href='00_main.jsp?center=05_newlogin.jsp'">회원가입</button>
 			        </form>
 			    </div>
 			    <div class="col-lg-4"></div>
 			</div>
-		</td>
-			
-	</tr>
+
 
 <script>
 
