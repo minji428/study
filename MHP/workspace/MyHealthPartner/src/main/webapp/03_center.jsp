@@ -87,8 +87,8 @@ request.setCharacterEncoding("UTF-8");
 	
 	.container{
 		position:relative;
-		left:100px;
-		top:10px;
+		left:400px;
+		top:-150px;
 	}
 </style>
 <title>Insert title here</title>
@@ -136,8 +136,7 @@ request.setCharacterEncoding("UTF-8");
 	<div class="container">
 		<div class="col-lg-4"></div>
 		    <div class="col-lg-4">
-		        <div class="jumbotron" style="padding-top : 20px;">                            <!--  부트트랩 -->
-		        <div style="position:absolute;">					   <!--  위치지정 -->
+		        <div class="jumbotron" style="padding-top : 20px;">         <!--  부트트랩 -->
 		        <form method="post" action="loginAction.jsp">
 		            <div class="form-group">
 		                <input type="text" class="form-control" placeholder="아이디" name="userID" maxlength="20">
