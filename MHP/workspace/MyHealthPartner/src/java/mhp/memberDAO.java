@@ -18,7 +18,7 @@ public class memberDAO {
 	public Connection getConnection() {
 		String dbURL = "jdbc:mysql://127.0.0.1:3306/mhp?serverTimezone=UTC";
 		String dbID = "root";
-		String dbPassword = "alswl3092!";
+		String dbPassword = "";
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			conn = DriverManager.getConnection(dbURL, dbID, dbPassword);
