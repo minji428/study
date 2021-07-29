@@ -1,77 +1,180 @@
+/* 센터로그인*/
+
 @charset "UTF-8";
 
-	.loginForm {
-	  position:relative;
-	  width:300px;
-	  height:50px;
-	  padding: 30px, 20px;
-	  background-color:#FFFFFF;
-	  text-align:center;
-	  top:-200px;
-	  left:400px;
-	  transform: translate(-125%,275%);
-	  border-radius: 15px;
-	}
-	
-	.loginForm h3{
-	  text-align: center;
-	}
-	
-	.idForm{
-	  border-bottom: 2px solid #adadad;
-	  margin: 5px;
-	  padding: 10px 10px;
-	}
-	
-	.passForm{
-	  border-bottom: 2px solid #adadad;
-	  margin: 5px;
-	  padding: 10px 10px;
-	}
-	
-	.id {
-	  width: 100%;
-	  border:none;
-	  outline:none;
-	  color: #636e72;
-	  font-size:16px;
-	  height:25px;
-	  background: none;
-	}
-	
-	.pw {
-	  width: 100%;
-	  border:none;
-	  outline:none;
-	  color: #636e72;
-	  font-size:16px;
-	  height:25px;
-	  background: none;
-	}
-	
-	.btn {
-	  position:relative;
-	  left:40%;
-	  transform: translateX(-50%);
-	  margin-bottom: 40px;
-	  width:80%;
-	  height:40px;
-	  background: linear-gradient(125deg,#81ecec,#6c5ce7,#81ecec);
-	  background-position: left;
-	  background-size: 200%;
-	  color:white;
-	  font-weight: bold;
-	  border:none;
-	  cursor:pointer;
-	  transition: 0.4s;
-	  display:inline;
-	}
-	
-	.btn:hover {
-	  background-position: right;
-	}
-	
-	.bottomText {
-	  text-align: center;
-	  margin:-33px;
-	}
+.loginForm {
+  position:relative;
+  width:300px;
+  height:50px;
+  padding: 30px, 20px;
+  background-color:#FFFFFF;
+  text-align:center;
+  top:-200px;
+  left:400px;
+  transform: translate(-125%,275%);
+  border-radius: 15px;
+}
+
+.loginForm h3{
+  text-align: center;
+}
+
+.idForm{
+  border-bottom: 2px solid #adadad;
+  margin: 5px;
+  padding: 10px 10px;
+}
+
+.passForm{
+  border-bottom: 2px solid #adadad;
+  margin: 5px;
+  padding: 10px 10px;
+}
+
+.id {
+  width: 100%;
+  border:none;
+  outline:none;
+  color: #636e72;
+  font-size:16px;
+  height:25px;
+  background: none;
+}
+
+.pw {
+  width: 100%;
+  border:none;
+  outline:none;
+  color: #636e72;
+  font-size:16px;
+  height:25px;
+  background: none;
+}
+
+.btn {
+  position:relative;
+  left:40%;
+  transform: translateX(-50%);
+  margin-bottom: 40px;
+  width:80%;
+  height:40px;
+  background: linear-gradient(125deg,#81ecec,#6c5ce7,#81ecec);
+  background-position: left;
+  background-size: 200%;
+  color:white;
+  font-weight: bold;
+  border:none;
+  cursor:pointer;
+  transition: 0.4s;
+  display:inline;
+}
+
+.btn:hover {
+  background-position: right;
+}
+
+.bottomText {
+  text-align: center;
+  margin:-33px;
+}
+
+* {
+margin: 0;
+padding: 0;
+font-family: sans-serif;
+}
+
+
+/* 로그인 안됐을때 나오는 화면*/
+.wrap {
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+}
+.form-wrap {
+    width: 380px;
+    height: 480px;
+    position: relative;
+    margin: 6% auto;
+    background: #fff;
+    padding: 5px;
+    overflow: hidden;
+}
+.button-wrap {
+    width: 230px;
+    margin: 35px auto;
+    position: relative;
+    box-shadow: 0 0 600px 9px #fcae8f;
+    border-radius: 30px;
+}
+.togglebtn {
+    padding: 10px 30px;
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    outline: none;
+    position: relative;
+}
+.togglebtn2 {
+	padding: 10px 30px;
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    outline: none;
+    width: 50%;
+    display: block;
+    margin: auto;
+    background: linear-gradient(125deg,#81ecec,#6c5ce7,#81ecec);
+    border-radius: 30px;
+}
+#btn {
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 110px;
+    height: 100%;
+    background: linear-gradient(125deg,#81ecec,#6c5ce7,#81ecec);
+    border-radius: 30px;
+    transition: .5s;
+}
+
+.input-group {
+    top: 180px;
+    position: absolute;
+    width: 280px;
+    transition: .5s;
+}
+.input-field {
+    width: 100%;
+    padding: 10px 0;
+    margin: 5px 0;
+    border: none;
+    border-bottom: 1px solid #999;
+    outline: none;
+    background: transparent;
+}
+.submit {
+    width: 85%;
+    padding: 10px 30px;
+    cursor: pointer;
+    display: block;
+    margin: auto;
+    background: linear-gradient(125deg,#81ecec,#6c5ce7,#81ecec);
+    border: 0;
+    outline: none;
+    border-radius: 30px;
+}
+span {
+    color: #777;
+    font-size: 12px;
+    bottom: 68px;
+    position: absolute;
+}
+#login {
+    left: 50px;
+}
+#register {
+    left: 450px;
+}
