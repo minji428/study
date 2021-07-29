@@ -95,43 +95,41 @@ request.setCharacterEncoding("UTF-8");
 </head>
 <body>
 
-	    <div class="slideshow-container">
-	      <!-- Full-width images with number and caption text -->
-	      <div class="mySlides fade">
-	        <div class="numbertext">1 / 4</div>
-	        <img src="img/1.jpg" width="50" height="3">
-	        <div class="text">MY HEALTH PARTNER</div>
-	      </div>
+    <div class="slideshow-container">
+      <!-- Full-width images with number and caption text -->
+      <div class="mySlides fade">
+        <div class="numbertext">1 / 4</div>
+        <img src="img/1.jpg" width="50" height="3">
+        <div class="text">MY HEALTH PARTNER</div>
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext">2 / 4</div>
+        <img src="img/2.jpg" width="50" height="3">
+        <div class="text">MY HEALTH PARTNER</div>
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext">3 / 4</div>
+        <img src="img/3.jpg" width="50" height="10">
+        <div class="text">MY HEALTH PARTNER</div>
+      </div>
+      
+      <div class="mySlides fade">
+        <div class="numbertext">4 / 4</div>
+        <img src="img/4.jpg" width="50" height="10">
+        <div class="text">MY HEALTH PARTNER</div>
+      </div>
+    </div>
+    <br/>
 	
-	      <div class="mySlides fade">
-	        <div class="numbertext">2 / 4</div>
-	        <img src="img/2.jpg" width="50" height="3">
-	        <div class="text">MY HEALTH PARTNER</div>
-	      </div>
-	
-	      <div class="mySlides fade">
-	        <div class="numbertext">3 / 4</div>
-	        <img src="img/3.jpg" width="50" height="10">
-	        <div class="text">MY HEALTH PARTNER</div>
-	      </div>
-	      
-	      <div class="mySlides fade">
-	        <div class="numbertext">4 / 4</div>
-	        <img src="img/4.jpg" width="50" height="10">
-	        <div class="text">MY HEALTH PARTNER</div>
-	      </div>
-	    </div>
-	    <br/>
-	
-	    <!-- The dots/circles -->
-	    <div style="text-align:center">
-	      <span class="dot" onclick="currentSlide(0)"></span>
-	      <span class="dot" onclick="currentSlide(1)"></span>
-	      <span class="dot" onclick="currentSlide(2)"></span>
-	      <span class="dot" onclick="currentSlide(3)"></span>
-	    </div>
-		
-	
+    <!-- The dots/circles -->
+    <div style="text-align:center">
+      <span class="dot" onclick="currentSlide(0)"></span>
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
 
 	<div class="container">
 		<div class="col-lg-4"></div>

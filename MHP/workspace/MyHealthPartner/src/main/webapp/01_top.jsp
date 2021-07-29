@@ -12,7 +12,7 @@ request.setCharacterEncoding("UTF-8");
 <body>
 	<table>
 		<tr height="100">
-			<td colspan="9" align="center">
+			<td colspan="7" align="center">
 				<h2><a href="00_main.jsp">나의 health 파트너</a></h2>
 			</td>
 			<td colspan="2" align="right">
