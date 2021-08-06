@@ -66,7 +66,7 @@ request.setCharacterEncoding("UTF-8");
 				    }
 				</script>
 				<div class="bottomText">
-					Don't you have ID? <a href="00_main.jsp?center=05_newlogin.jsp">sign up</a>
+					Don't you have ID? <a href="05_newlogin.jsp">sign up</a>
 			    </div>
 	    </form>
 	</div>
