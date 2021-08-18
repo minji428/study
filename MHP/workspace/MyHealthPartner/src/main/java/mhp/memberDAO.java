@@ -18,7 +18,7 @@ public class memberDAO {
 	public Connection getConnection() {
 		String dbURL = "jdbc:mysql://127.0.0.1:3306/mhp?serverTimezone=UTC";
 		String dbID = "root";
-		String dbPassword = "";
+		String dbPassword = "alswl3092!";
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			conn = DriverManager.getConnection(dbURL, dbID, dbPassword);
@@ -82,8 +82,96 @@ public class memberDAO {
 			if(rs!=null)
 				try {rs.close();}catch(SQLException sqle) {}
 		}
-		System.out.println(" pw 확인용 = " + pw);
 		return pw;
 	}
+	
+	public void insertMember(String id, String pw, String name, String nickname, String date, String tel, String address, String email) {
+		conn = getConnection();
+		
+		try {
+			String sql = "insert into member values(?,?,?,?,?,now(),?,?,?)";
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1, id);
+			pstmt.setString(2, pw);
+			pstmt.setString(3, name);
+			pstmt.setString(4, nickname);
+			pstmt.setString(5, date);
+			pstmt.setString(6, tel);
+			pstmt.setString(7, address);
+			pstmt.setString(8, email);
+			pstmt.executeUpdate();
+			
+		}catch(Exception e) {
+			e.printStackTrace();
+		}finally {
+			if(conn!=null)
+				try {conn.close();}catch(SQLException sqle) {}
+			if(pstmt!=null)
+				try {pstmt.close();}catch(SQLException sqle) {}
+			if(rs!=null)
+				try {rs.close();}catch(SQLException sqle) {}
+		}
+	}
 
+	public int checkDoubleId(String id) {
+		int check=-1;
+		try {
+			String dbid="";
+			conn = getConnection();
+			
+			String sql = "select * from member where id=?";
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1, id);
+			rs = pstmt.executeQuery();
+			
+			while(rs.next()) {
+				dbid = rs.getString("id");
+				if(dbid.equals(id)) {
+					check=1;
+				}
+			}
+			
+		}catch(Exception e) {
+			e.printStackTrace();
+		}finally {
+			if(conn!=null)
+				try {conn.close();}catch(SQLException sqle) {}
+			if(pstmt!=null)
+				try {pstmt.close();}catch(SQLException sqle) {}
+			if(rs!=null)
+				try {rs.close();}catch(SQLException sqle) {}
+		}
+		System.out.println("check = " + check);
+		return check;
+	}
+	
+	public int checkDoubleEmail(String email) {
+		int check=-1;
+		String dbemail="";
+		try {
+			conn = getConnection();
+			String sql = "select email from member where email=?";
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1, email);
+			rs = pstmt.executeQuery();
+			
+			if(rs.next()) {
+				dbemail = rs.getString(1);
+				if(dbemail.equals(email)) {
+					check=2;
+				}
+			}
+		}catch(Exception e) {
+			e.printStackTrace();
+		}finally {
+			if(conn!=null)
+				try {conn.close();}catch(SQLException sqle) {}
+			if(pstmt!=null)
+				try {pstmt.close();}catch(SQLException sqle) {}
+			if(rs!=null)
+				try {rs.close();}catch(SQLException sqle) {}
+		}
+		
+		return check;
+	}
 }
