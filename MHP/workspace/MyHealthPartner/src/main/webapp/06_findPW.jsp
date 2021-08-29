@@ -18,7 +18,7 @@
 	
 	String pw = memberDAO.instance.findPw(name, id, tel);
 	
-	if(pw!=null){
+	if(pw!=""){
 		%>
 		<script>
 			alert("회원님의 패스워드는 <%= pw %>입니다.");

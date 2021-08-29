@@ -51,13 +51,17 @@ request.setCharacterEncoding("UTF-8");
 	    
 	<!-- 로그인 -->
 	<div class="container">
+	<%
+		String id = (String)session.getAttribute("id");
+		if(id==null){		
+	%>
 		<form action="04_loginPro.jsp" method="post" class="loginForm">
 		    <h2>Login</h2>
 			    <div class="idForm">
-				    <input type="text" class="id" placeholder="ID">
+				    <input type="text" name="id" class="id" placeholder="ID">
 				</div>
 				<div class="passForm">
-					<input type="password" class="pw" placeholder="PW">
+					<input type="password" name="pw" class="pw" placeholder="PW">
 				</div>
 				<input type="submit" class="btn" value="LOG IN">
 				<script>
@@ -69,6 +73,13 @@ request.setCharacterEncoding("UTF-8");
 					Don't you have ID? <a href="05_newlogin.jsp">sign up</a>
 			    </div>
 	    </form>
+    <%
+		}else{
+    %>
+    	<%=id %>님 반갑습니다.
+    <%
+		}
+    %>
 	</div>
 
 <script>
@@ -116,6 +127,11 @@ request.setCharacterEncoding("UTF-8");
 <br>
 <br>
 <br>
+
+
+
+
+
 <br>
 <br>
 <br>
