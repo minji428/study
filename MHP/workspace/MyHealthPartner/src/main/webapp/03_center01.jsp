@@ -50,7 +50,7 @@ request.setCharacterEncoding("UTF-8");
     </div>
 	    
 	<!-- 로그인 -->
-	<div class="container">
+	<div class="container1">
 	<%
 		String id = (String)session.getAttribute("id");
 		if(id==null){		
@@ -81,8 +81,15 @@ request.setCharacterEncoding("UTF-8");
 		}
     %>
 	</div>
-
-	<div align=center class="container2">
+	<br>
+	<br>
+	<br>
+	<br>
+	
+	<br>
+	<br>
+	<br>
+	<div align=left class="container2">
 		<table class="table table-striped" style="text-align: center; border: 1px solid #dddddd">
 			<thead>
 				<tr>
@@ -147,7 +154,18 @@ request.setCharacterEncoding("UTF-8");
 	</script>
 	<br>
 	<br>
-
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
 
 </body>
 </html>
