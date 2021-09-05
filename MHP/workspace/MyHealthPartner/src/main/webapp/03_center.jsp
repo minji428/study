@@ -1,3 +1,4 @@
+<%@page import="mhp.bbs"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -83,6 +84,13 @@ request.setCharacterEncoding("UTF-8");
 	</div>
 
 	<div align=center class="container2">
+<%
+		String bbsID = (String)session.getAttribute("bbsID");
+		String bbsTitle = (String)session.getAttribute("bbsTitle");
+		String bbsDate = (String)session.getAttribute("bbsDate");
+		
+%>
+		
 		<table class="table table-striped" style="text-align: center; border: 1px solid #dddddd">
 			<thead>
 				<tr>
@@ -94,14 +102,14 @@ request.setCharacterEncoding("UTF-8");
 			</thead>
 			<tbody>
 				<tr>
-					<td>1</td>
-					<td>안녕하세요</td>
-					<td>홍길동</td>
-					<td>2017-05-04</td>
+					<td><%=bbsID %></td>
+					<td><%=bbsTitle %></td>
+					<td><%=id %></td>
+					<td><%=bbsDate %></td>
 				</tr>
 			</tbody>
 		</table>
-		<a href="write.jsp" class="btn btn-primary pull-right">글쓰기</a>
+		<a href="08_write.jsp" class="btn btn-primary pull-right">글쓰기</a>
 	</div>
 	<script>
 		var slideIndex = 0; //slide index
