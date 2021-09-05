@@ -11,9 +11,9 @@
 </head>
 <body>
     <%
-        String userID = null;
-        if (session.getAttribute("userID") != null) {
-            userID = (String) session.getAttribute("userID");
+        String id = null;
+        if (session.getAttribute("id") != null) {
+            id = (String) session.getAttribute("id");
         }
     %>
     <nav class="navbar navbar-default">
@@ -30,10 +30,10 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
                 <li><a href="07_writeform.jsp">게시판</a></li>
-                <li><a href="08_write.jsp">글쓰기</a></li>
+                <li class="active"><a href="08_write.jsp">글쓰기</a></li>
             </ul>
             <%
-                if(userID == null) {
+                if(id == null) {
             %>
             <ul class="nav navbar-nav navbar-right">
                 <li class="dropdown">
@@ -55,7 +55,7 @@
                         data-toggle="dropdown" role="button" aria-haspopup="true"
                         aria-expanded="false">회원관리<span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li><a href="logoutAction.jsp">로그아웃</a></li>
+                        <li><a href="00_main.jsp">로그아웃</a></li>
                     </ul>
                 </li>
             </ul>

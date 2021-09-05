@@ -11,6 +11,13 @@ request.setCharacterEncoding("UTF-8");
 <link rel="stylesheet" href="css/center.css">
 <link rel="stylesheet" href="css/login.css">
 <title>Insert title here</title>
+    <script type="text/javascript">
+
+        // 로그아웃 담당 JSP로 이동
+        function logoutPro(){
+            location.href="04_logoutPro.jsp";
+        }
+    </script>
 </head>
 <body>
 
@@ -78,6 +85,7 @@ request.setCharacterEncoding("UTF-8");
 		}else{
     %>
     	<%=id %>님 반갑습니다.
+    	<input type="button" value="로그아웃" onclick="logoutPro()" />
     <%
 		}
     %>
