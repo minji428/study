@@ -42,6 +42,7 @@ public class memberDAO {
 				dbpw = rs.getString(1);
 				if(dbpw.equals(pw)) {
 					check=1;
+					
 				}
 			}
 		}catch(Exception e){
@@ -54,7 +55,6 @@ public class memberDAO {
 			if(rs!=null)
 				try {rs.close();}catch(SQLException sqle) {}
 		}
-		
 		return check;
 	}
 	
