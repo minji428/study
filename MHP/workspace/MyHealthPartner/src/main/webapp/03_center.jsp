@@ -1,3 +1,5 @@
+<%@page import="java.util.ArrayList"%>
+<%@page import="mhp.BbsDAO"%>
 <%@page import="mhp.bbs"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
@@ -109,15 +111,29 @@ request.setCharacterEncoding("UTF-8");
 				</tr>
 			</thead>
 			<tbody>
-				<tr>
-					<td><%=bbsID %></td>
-					<td><%=bbsTitle %></td>
-					<td><%=id %></td>
-					<td><%=bbsDate %></td>
-				</tr>
+					<%
+					int pageNumber = 1; // 기본 페이지
+					if (request.getParameter("pageNumber") != null) {
+						pageNumber = Integer.parseInt(request.getParameter("pageNumber"));
+					}
+						BbsDAO bbsDAO = new BbsDAO();
+						ArrayList<bbs> list = bbsDAO.getlist(pageNumber);
+						for(int i = 0; i < list.size(); i++) {
+					%>
+					<tr>
+						<td><%= list.get(i).getBbsID() %></td>
+						<td><a href="07_writeform.jsp?bbsID=<%= list.get(i).getBbsID() %>">
+							<%= list.get(i).getBbsTitle() %></a></td>
+						<td><%= list.get(i).getid() %></td>
+						<td><%= list.get(i).getBbsDate().substring(0, 11) + list.get(i).getBbsDate().substring(11, 13) 
+							+ "시 " + list.get(i).getBbsDate().substring(14, 16) + "분 " %></td>
+					</tr>
+					<%
+						}
+					%>
 			</tbody>
 		</table>
-		<a href="08_write.jsp" class="btn btn-primary pull-right">글쓰기</a>
+		<input type="button" onClick="location.href='08_write.jsp'" class="btn btn-primary pull-right" style="positon:relative; text-align:center; width:60pt;height:30pt;" value="글쓰기">
 	</div>
 	<script>
 		var slideIndex = 0; //slide index
@@ -163,7 +179,8 @@ request.setCharacterEncoding("UTF-8");
 	</script>
 	<br>
 	<br>
-
+ <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="js/bootstrap.js"></script>
 
 </body>
 </html>
