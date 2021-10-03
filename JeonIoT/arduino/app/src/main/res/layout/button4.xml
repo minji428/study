@@ -19,7 +19,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="미세먼지, 온습도 측정기"
+            android:text="에어컨"
             android:textSize="25dp"
             android:textStyle="bold"/>
         <ImageView
@@ -27,8 +27,9 @@
             android:layout_width="230dp"
             android:layout_height="230dp"
             android:layout_marginTop="40dp"
-            app:srcCompat="@drawable/good"
+            app:srcCompat="@drawable/aircon"
             android:layout_gravity="center"/>
+
         <TextView
             android:id="@+id/stausText"
             android:layout_width="wrap_content"
@@ -41,6 +42,12 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="#ffffff"/>
+
+        <SeekBar
+            android:id="@+id/seekBar4"
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:background="@color/white" />
 
         <TextView
             android:id="@+id/contidionText"
@@ -83,20 +90,19 @@
                 android:id="@+id/ledSwitch"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="LED 전원 "
+                android:text="전원 "
                 android:layout_marginRight="10dp"
                 android:textOn="On"
                 android:textOff="Off"/>
-            <androidx.appcompat.widget.SwitchCompat
-                android:id="@+id/speakSwitch"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="스피커 전원 "
-                android:padding="10dp"
-                android:textOn="On"
-                android:textOff="Off"/>
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
         </LinearLayout>
     </LinearLayout>
-
-
 </LinearLayout>
+
+
+

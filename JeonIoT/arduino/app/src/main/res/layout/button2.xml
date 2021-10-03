@@ -19,7 +19,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="미세먼지, 온습도 측정기"
+            android:text="현관문"
             android:textSize="25dp"
             android:textStyle="bold"/>
         <ImageView
@@ -27,7 +27,7 @@
             android:layout_width="230dp"
             android:layout_height="230dp"
             android:layout_marginTop="40dp"
-            app:srcCompat="@drawable/good"
+            app:srcCompat="@drawable/close"
             android:layout_gravity="center"/>
         <TextView
             android:id="@+id/stausText"
@@ -83,20 +83,31 @@
                 android:id="@+id/ledSwitch"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="LED 전원 "
+                android:text="문 열림 닫힘 "
                 android:layout_marginRight="10dp"
                 android:textOn="On"
                 android:textOff="Off"/>
-            <androidx.appcompat.widget.SwitchCompat
-                android:id="@+id/speakSwitch"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="스피커 전원 "
-                android:padding="10dp"
-                android:textOn="On"
-                android:textOff="Off"/>
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        </LinearLayout>
+        <Switch
+            android:id="@+id/switch1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="44dp"
+            android:text="인체감지기능 작동"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.185"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView4" />
         </LinearLayout>
     </LinearLayout>
 
 
-</LinearLayout>
+
