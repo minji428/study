@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@color/teal_700"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/button7"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_gravity="center"
+            android:layout_margin="55dp"
+            android:background="@drawable/button_background"
+            android:onClick="onButtonClicked"
+            android:drawableBottom="@drawable/lighton"
+            android:text="1번 방"
+            android:textColor="@color/black"
+            app:backgroundTint="@null"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:layout_editor_absoluteY="146dp" />
+
+        <Button
+            android:id="@+id/button8"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_gravity="center"
+            android:background="@drawable/button_background"
+            android:onClick="onButtonClicked"
+            android:drawableBottom="@drawable/lighton"
+            android:text="2번 방"
+            android:textColor="@color/black"
+            app:backgroundTint="@null"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteY="145dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@color/teal_700"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/button9"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_gravity="center"
+            android:layout_margin="55dp"
+            android:background="@drawable/button_background"
+            android:onClick="onButtonClicked"
+            android:drawableBottom="@drawable/lighton"
+            android:text="3번 방"
+            android:textColor="@color/black"
+            app:backgroundTint="@null"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:layout_editor_absoluteY="146dp" />
+
+        <Button
+            android:id="@+id/button10"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_gravity="center"
+            android:background="@drawable/button_background"
+            android:onClick="onButtonClicked"
+            android:drawableBottom="@drawable/lighton"
+            android:text="4번 방"
+            android:textColor="@color/black"
+            app:backgroundTint="@null"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteY="145dp" />
+    </LinearLayout>
+
+</LinearLayout>
